@@ -15,6 +15,7 @@ import '@c8y/ng1-modules/cockpit-smartRulesUI/cumulocity.json';
 import '@c8y/ng1-modules/cockpit-dataPointExplorerUI/cumulocity.json';
 import '@c8y/ng1-modules/alarmsEventsExplorer/cumulocity.json';
 import '@c8y/ng1-modules/deviceDatabase4/cumulocity.json';
+import '@c8y/ng1-modules/deviceTitle/cumulocity.json';
 import '@c8y/ng1-modules/modbusWidget4/cumulocity.json';
 import '@c8y/ng1-modules/scada/cumulocity.json';
 import '@c8y/ng1-modules/htmlWidget/cumulocity.json';
