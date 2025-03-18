@@ -96,6 +96,13 @@ export default {
         path: '@c8y/ngx-components/search',
         description: 'Allows to search for assets.',
         scope: 'self'
+      },
+      {
+        name: 'Data point explorer',
+        module: 'DatapointExplorerModule',
+        path: '@c8y/ngx-components/datapoint-explorer',
+        description: 'Enables visualization of data points',
+        scope: 'self-optional'
       }
     ]
   },
