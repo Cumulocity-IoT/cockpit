@@ -102,7 +102,7 @@ export default {
         module: 'DatapointExplorerModule',
         path: '@c8y/ngx-components/datapoint-explorer',
         description: 'Enables visualization of data points',
-        scope: 'self-optional'
+        scope: 'self'
       }
     ]
   },
