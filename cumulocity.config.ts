@@ -1,5 +1,5 @@
 import type { ConfigurationOptions } from '@c8y/devkit';
-import { version, description, author, name } from './package.json';
+import { version, description, author, name, license } from './package.json';
 import { gettext } from '@c8y/ngx-components/gettext';
 import { cockpitWidgetsExports } from '@c8y/ngx-components/widgets/cockpit-exports';
 
@@ -20,14 +20,23 @@ export default {
     sensorAppOneLink: 'http://onelink.to/pca6qe',
     sensorPhone: true,
     contentSecurityPolicy:
-      "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss: data:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
+      "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' http: https: ws: wss: data:;  script-src 'self' *.bugherd.com *.twitter.com *.twimg.com *.aptrinsic.com 'unsafe-inline' 'unsafe-eval' data: blob:; style-src * 'unsafe-inline' blob:; img-src * data: blob:; font-src * data:; frame-src *; worker-src 'self' blob:;",
     dynamicOptionsUrl: true,
     contextHelp: true,
+    license,
     upgrade: true,
+    importMap: {
+      lit: '@c8y/html-repo/lit',
+      leaflet: '@c8y/html-repo/leaflet',
+      echarts: '@c8y/html-repo/echarts',
+      angular: '@c8y/html-repo/angular',
+      styles: '@c8y/html-repo/styles',
+      fetch: '@c8y/html-repo/fetch'
+    },
     exports: [
       ...cockpitWidgetsExports,
       {
-        name: 'Reports',
+        name: 'Dashboards: Reports',
         module: 'ReportDashboardModule',
         path: '@c8y/ngx-components/report-dashboard',
         description: 'Reports list and navigator items reports',
@@ -102,6 +111,62 @@ export default {
         module: 'DatapointExplorerModule',
         path: '@c8y/ngx-components/datapoint-explorer',
         description: 'Enables visualization of data points',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: Dashboard manager',
+        module: 'DashboardManagerModule',
+        path: '@c8y/ngx-components/dashboard-manager',
+        description: 'Type dashboards manager.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: Add device dashboards',
+        module: 'AddDeviceContextDashboardModule',
+        path: '@c8y/ngx-components/context-dashboard/device/add',
+        description: 'Allows to add dashboards on device level.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: View device dashboards',
+        module: 'ViewDeviceContextDashboardModule',
+        path: '@c8y/ngx-components/context-dashboard/device/view',
+        description: 'Allows to view dashboards on device level.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: Add asset/group dashboards',
+        module: 'AddAssetContextDashboardModule',
+        path: '@c8y/ngx-components/context-dashboard/asset/add',
+        description: 'Allows to add dashboards on asset/group level.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: View asset/group dashboards',
+        module: 'ViewAssetContextDashboardModule',
+        path: '@c8y/ngx-components/context-dashboard/asset/view',
+        description: 'Allows to view dashboards on asset/group level.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboards: Cockpit home dashboard',
+        module: 'CockpitDashboardModule',
+        path: '@c8y/ngx-components/context-dashboard/cockpit-home-dashboard',
+        description: 'The home dashboard of the cockpit app, shown when cockpit is opened.',
+        scope: 'self'
+      },
+      {
+        name: 'Dashboard details advanced tab',
+        module: 'DashboardDetailsAdvancedTabModule',
+        path: '@c8y/ngx-components/dashboard-details-advanced-tab',
+        description: 'Dashboard details tab for advanced settings.',
+        scope: 'self'
+      },
+      {
+        name: 'Exports',
+        module: 'exportsProviders',
+        path: '@c8y/ngx-components/exports',
+        description: 'Exports',
         scope: 'self'
       }
     ]

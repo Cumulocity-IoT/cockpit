@@ -9,10 +9,6 @@ import {
   UPGRADE_ROUTES
 } from '@c8y/ngx-components/upgrade';
 import { SubAssetsModule } from '@c8y/ngx-components/sub-assets';
-import {
-  CockpitDashboardModule,
-  DashboardManagerModule
-} from '@c8y/ngx-components/context-dashboard';
 import { ReportsModule } from '@c8y/ngx-components/reports';
 import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-download';
 import { CockpitConfigModule } from '@c8y/ngx-components/cockpit-config';
@@ -29,8 +25,6 @@ import { PendingMoRequestModule } from '@c8y/ngx-components/pending-mo-request';
     ReportsModule,
     NgUpgradeModule,
     DashboardUpgradeModule,
-    CockpitDashboardModule,
-    DashboardManagerModule,
     BinaryFileDownloadModule,
     SubAssetsModule.config(),
     CockpitConfigModule,
