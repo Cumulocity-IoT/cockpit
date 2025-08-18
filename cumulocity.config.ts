@@ -169,7 +169,10 @@ export default {
         description: 'Exports',
         scope: 'self'
       }
-    ]
+    ],
+    remotes: {
+      [`analyticsrules@${version.split('.')[0]}-stable`]: ['AnalyticsInstanceModule']
+    }
   },
   buildTime: {
     federation: [
