@@ -171,7 +171,7 @@ export default {
       }
     ],
     remotes: {
-      [`analyticsrules@${version.split('.')[0]}-stable`]: ['AnalyticsInstanceModule']
+      [`smart-rules@${version.split('.')[0]}-stable`]: ['AnalyticsInstanceModule']
     }
   },
   buildTime: {
