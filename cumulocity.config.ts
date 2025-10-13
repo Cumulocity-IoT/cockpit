@@ -168,6 +168,13 @@ export default {
         path: '@c8y/ngx-components/exports',
         description: 'Exports',
         scope: 'self'
+      },
+      {
+        name: 'Computed asset properties',
+        module: 'computedAssetPropertiesProviders',
+        path: '@c8y/ngx-components/computed-asset-properties',
+        description: 'Set of predefined computed asset properties.',
+        scope: 'self'
       }
     ],
     remotes: {
