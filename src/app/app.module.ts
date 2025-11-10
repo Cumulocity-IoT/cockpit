@@ -14,6 +14,7 @@ import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-downlo
 import { CockpitConfigModule } from '@c8y/ngx-components/cockpit-config';
 import { PluginSetupStepperModule } from '@c8y/ngx-components/ecosystem/plugin-setup-stepper';
 import { PendingMoRequestModule } from '@c8y/ngx-components/pending-mo-request';
+import { GlobalContextModule } from '@c8y/ngx-components/global-context';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { PendingMoRequestModule } from '@c8y/ngx-components/pending-mo-request';
     SubAssetsModule.config(),
     CockpitConfigModule,
     PluginSetupStepperModule,
-    PendingMoRequestModule
+    PendingMoRequestModule,
+    GlobalContextModule
   ]
 })
 export class AppModule extends HybridAppModule {
