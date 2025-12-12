@@ -66,7 +66,7 @@ export default {
       {
         name: 'Assets navigator',
         module: 'AssetsNavigatorModule',
-        path: '@c8y/ngx-components/assets-navigator',
+        path: '@c8y/ngx-components/module-federation-exports/assets-navigator',
         description: '"Groups" navigation entry, allowing to navigate through asset hierarchy.',
         scope: 'self'
       },
@@ -174,6 +174,13 @@ export default {
         module: 'computedAssetPropertiesProviders',
         path: '@c8y/ngx-components/computed-asset-properties',
         description: 'Set of predefined computed asset properties.',
+        scope: 'self'
+      },
+      {
+        name: 'Group breadcrumbs',
+        module: 'groupBreadcrumbsProviders',
+        path: '@c8y/ngx-components/group-breadcrumbs',
+        description: 'Breadcrumbs extension to enhance navigation between groups.',
         scope: 'self'
       }
     ],
