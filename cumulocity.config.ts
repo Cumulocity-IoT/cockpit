@@ -36,151 +36,156 @@ export default {
     exports: [
       ...cockpitWidgetsExports,
       {
-        name: 'Dashboards: Reports',
+        name: gettext('Dashboards: Reports'),
         module: 'ReportDashboardModule',
         path: '@c8y/ngx-components/report-dashboard',
-        description: 'Reports list and navigator items reports',
+        description: gettext('Reports list and navigator items reports'),
         scope: 'self'
       },
       {
-        name: 'Cockpit alarms',
+        name: gettext('Cockpit alarms'),
         module: 'CockpitAlarmsModule',
         path: '@c8y/ngx-components/alarms/cockpit',
-        description: 'Alarms functionality in cockpit application.',
+        description: gettext('Alarms functionality in cockpit application.'),
         scope: 'self'
       },
       {
-        name: 'Sensor phone',
+        name: gettext('Sensor phone'),
         module: 'SensorPhoneModule',
         path: '@c8y/ngx-components/sensor-phone',
-        description: 'Dialogs to connect smartphone to platform.',
+        description: gettext('Dialogs to connect smartphone to platform.'),
         scope: 'self'
       },
       {
-        name: 'Child devices',
+        name: gettext('Child devices'),
         module: 'ChildDevicesModule',
         path: '@c8y/ngx-components/child-devices',
-        description: 'View listing children of devices.',
+        description: gettext('View listing children of devices.'),
         scope: 'self'
       },
       {
-        name: 'Assets navigator',
+        name: gettext('Assets navigator'),
         module: 'AssetsNavigatorModule',
         path: '@c8y/ngx-components/module-federation-exports/assets-navigator',
-        description: '"Groups" navigation entry, allowing to navigate through asset hierarchy.',
+        description: gettext(
+          '"Groups" navigation entry, allowing to navigate through asset hierarchy.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Data point library',
+        name: gettext('Data point library'),
         module: 'DatapointLibraryModule',
         path: '@c8y/ngx-components/datapoint-library',
-        description: 'Allows to define certain features of data points.',
+        description: gettext('Allows to define certain features of data points.'),
         scope: 'self'
       },
       {
-        name: 'Bookmarks',
+        name: gettext('Bookmarks'),
         module: 'BookmarksModule',
         path: '@c8y/ngx-components/bookmarks',
-        description: 'Allows to bookmark views.',
+        description: gettext('Allows to bookmark views.'),
         scope: 'self'
       },
       {
-        name: 'Location',
+        name: gettext('Location'),
         module: 'LocationTabModule',
         path: '@c8y/ngx-components/location',
-        description: 'View the location of devices and assets.',
+        description: gettext('View the location of devices and assets.'),
         scope: 'self'
       },
       {
-        name: 'Add location',
+        name: gettext('Add location'),
         module: 'AddLocationModule',
         path: '@c8y/ngx-components/location',
-        description:
-          'Assign a location to devices and assets that currently do not have any location.',
+        description: gettext(
+          'Assign a location to devices and assets that currently do not have any location.'
+        ),
         scope: 'self-optional'
       },
       {
-        name: 'Search',
+        name: gettext('Search'),
         module: 'SearchModule',
         path: '@c8y/ngx-components/search',
-        description: 'Allows to search for assets.',
+        description: gettext('Allows to search for assets.'),
         scope: 'self'
       },
       {
-        name: 'Data point explorer',
+        name: gettext('Data point explorer'),
         module: 'DatapointExplorerModule',
         path: '@c8y/ngx-components/datapoint-explorer',
-        description: 'Enables visualization of data points',
+        description: gettext('Enables visualization of data points'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: Dashboard manager',
+        name: gettext('Dashboards: Dashboard manager'),
         module: 'DashboardManagerModule',
         path: '@c8y/ngx-components/dashboard-manager',
-        description: 'Type dashboards manager.',
+        description: gettext('Type dashboards manager.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: Add device dashboards',
+        name: gettext('Dashboards: Add device dashboards'),
         module: 'AddDeviceContextDashboardModule',
         path: '@c8y/ngx-components/context-dashboard/device/add',
-        description: 'Allows to add dashboards on device level.',
+        description: gettext('Allows to add dashboards on device level.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: View device dashboards',
+        name: gettext('Dashboards: View device dashboards'),
         module: 'ViewDeviceContextDashboardModule',
         path: '@c8y/ngx-components/context-dashboard/device/view',
-        description: 'Allows to view dashboards on device level.',
+        description: gettext('Allows to view dashboards on device level.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: Add asset/group dashboards',
+        name: gettext('Dashboards: Add asset/group dashboards'),
         module: 'AddAssetContextDashboardModule',
         path: '@c8y/ngx-components/context-dashboard/asset/add',
-        description: 'Allows to add dashboards on asset/group level.',
+        description: gettext('Allows to add dashboards on asset/group level.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: View asset/group dashboards',
+        name: gettext('Dashboards: View asset/group dashboards'),
         module: 'ViewAssetContextDashboardModule',
         path: '@c8y/ngx-components/context-dashboard/asset/view',
-        description: 'Allows to view dashboards on asset/group level.',
+        description: gettext('Allows to view dashboards on asset/group level.'),
         scope: 'self'
       },
       {
-        name: 'Dashboards: Cockpit home dashboard',
+        name: gettext('Dashboards: Cockpit home dashboard'),
         module: 'CockpitDashboardModule',
         path: '@c8y/ngx-components/context-dashboard/cockpit-home-dashboard',
-        description: 'The home dashboard of the cockpit app, shown when cockpit is opened.',
+        description: gettext(
+          'The home dashboard of the cockpit app, shown when cockpit is opened.'
+        ),
         scope: 'self'
       },
       {
-        name: 'Dashboard details advanced tab',
+        name: gettext('Dashboard details advanced tab'),
         module: 'DashboardDetailsAdvancedTabModule',
         path: '@c8y/ngx-components/dashboard-details-advanced-tab',
-        description: 'Dashboard details tab for advanced settings.',
+        description: gettext('Dashboard details tab for advanced settings.'),
         scope: 'self'
       },
       {
-        name: 'Exports',
+        name: gettext('Exports'),
         module: 'exportsProviders',
         path: '@c8y/ngx-components/exports',
-        description: 'Exports',
+        description: gettext('Exports'),
         scope: 'self'
       },
       {
-        name: 'Computed asset properties',
+        name: gettext('Computed asset properties'),
         module: 'computedAssetPropertiesProviders',
         path: '@c8y/ngx-components/computed-asset-properties',
-        description: 'Set of predefined computed asset properties.',
+        description: gettext('Set of predefined computed asset properties.'),
         scope: 'self'
       },
       {
-        name: 'Group breadcrumbs',
+        name: gettext('Group breadcrumbs'),
         module: 'groupBreadcrumbsProviders',
         path: '@c8y/ngx-components/group-breadcrumbs',
-        description: 'Breadcrumbs extension to enhance navigation between groups.',
+        description: gettext('Breadcrumbs extension to enhance navigation between groups.'),
         scope: 'self'
       }
     ],
