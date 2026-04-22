@@ -50,6 +50,13 @@ export default {
         scope: 'self'
       },
       {
+        name: gettext('Cockpit events'),
+        module: 'eventsCockpitProviders',
+        path: '@c8y/ngx-components/events/cockpit',
+        description: gettext('Event features for Cockpit application.'),
+        scope: 'self'
+      },
+      {
         name: gettext('Sensor phone'),
         module: 'SensorPhoneModule',
         path: '@c8y/ngx-components/sensor-phone',
