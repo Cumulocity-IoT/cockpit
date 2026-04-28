@@ -8,12 +8,12 @@ import {
   HybridAppModule,
   UPGRADE_ROUTES
 } from '@c8y/ngx-components/upgrade';
-import { SubAssetsModule } from '@c8y/ngx-components/sub-assets';
 import { ReportsModule } from '@c8y/ngx-components/reports';
 import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-download';
 import { CockpitConfigModule } from '@c8y/ngx-components/cockpit-config';
 import { PluginSetupStepperModule } from '@c8y/ngx-components/ecosystem/plugin-setup-stepper';
 import { PendingMoRequestModule } from '@c8y/ngx-components/pending-mo-request';
+import { provideMapConfig } from '@c8y/ngx-components/map';
 import { GlobalContextModule } from '@c8y/ngx-components/global-context';
 
 @NgModule({
@@ -27,12 +27,12 @@ import { GlobalContextModule } from '@c8y/ngx-components/global-context';
     NgUpgradeModule,
     DashboardUpgradeModule,
     BinaryFileDownloadModule,
-    SubAssetsModule.config(),
     CockpitConfigModule,
     PluginSetupStepperModule,
     PendingMoRequestModule,
     GlobalContextModule
-  ]
+  ],
+  providers: [provideMapConfig()]
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {

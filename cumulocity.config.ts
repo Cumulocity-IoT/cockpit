@@ -6,6 +6,8 @@ import { cockpitWidgetsExports } from '@c8y/ngx-components/widgets/cockpit-expor
 const defaultDescription = gettext(
   'The Cockpit application provides you with options to manage and monitor Internet of Things (IoT) assets and data from a business perspective.'
 );
+const majorWebSDKVersion = version.split('.')[0];
+const stableTagBasedOnWebSDKVersion = `${majorWebSDKVersion}-stable`;
 
 export default {
   runTime: {
@@ -68,15 +70,6 @@ export default {
         module: 'ChildDevicesModule',
         path: '@c8y/ngx-components/child-devices',
         description: gettext('View listing children of devices.'),
-        scope: 'self'
-      },
-      {
-        name: gettext('Assets navigator'),
-        module: 'AssetsNavigatorModule',
-        path: '@c8y/ngx-components/module-federation-exports/assets-navigator',
-        description: gettext(
-          '"Groups" navigation entry, allowing to navigate through asset hierarchy.'
-        ),
         scope: 'self'
       },
       {
@@ -197,7 +190,12 @@ export default {
       }
     ],
     remotes: {
-      [`smart-rules@${version.split('.')[0]}-stable`]: ['AnalyticsInstanceModule']
+      [`smart-rules@${stableTagBasedOnWebSDKVersion}`]: ['AnalyticsInstanceModule'],
+      [`dtm-plugins@${stableTagBasedOnWebSDKVersion}`]: [
+        'AddAssetModule',
+        'AssetsNavigatorModule',
+        'SubAssetsModule'
+      ]
     }
   },
   buildTime: {
