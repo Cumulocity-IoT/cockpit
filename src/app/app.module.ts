@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeModule as NgUpgradeModule } from '@angular/upgrade/static';
 import { CoreModule, RouterModule } from '@c8y/ngx-components';
@@ -6,7 +6,7 @@ import {
   DashboardUpgradeModule,
   UpgradeModule,
   HybridAppModule,
-  UPGRADE_ROUTES
+  UPGRADE_ROUTES,
 } from '@c8y/ngx-components/upgrade';
 import { ReportsModule } from '@c8y/ngx-components/reports';
 import { BinaryFileDownloadModule } from '@c8y/ngx-components/binary-file-download';
@@ -30,9 +30,9 @@ import { GlobalContextModule } from '@c8y/ngx-components/global-context';
     CockpitConfigModule,
     PluginSetupStepperModule,
     PendingMoRequestModule,
-    GlobalContextModule
+    GlobalContextModule,
   ],
-  providers: [provideMapConfig()]
+  providers: [provideZoneChangeDetection(), provideMapConfig()],
 })
 export class AppModule extends HybridAppModule {
   constructor(protected override upgrade: NgUpgradeModule) {
