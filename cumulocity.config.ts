@@ -196,6 +196,7 @@ export default {
         'AssetsNavigatorModule',
         'SubAssetsModule',
       ],
+      [`ai-plugins@${stableTagBasedOnWebSDKVersion}`]: ['assistantAgentProviders'],
     },
   },
   buildTime: {
